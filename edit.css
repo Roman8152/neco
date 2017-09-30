@@ -1,7 +1,36 @@
 .heading {
-    font-family: 'Comfortaa', cursive;        
+    font-family: 'Comfortaa', cursive;
+    padding: 0;
+    margin: 0;        
+}
+
+.heading i {
+    font-size: 20px;
+}
+
+.heading h1 {
+    font-size: 50px;
 }
 
 * {
     text-align: center;
+    color: white;
+}
+
+.frame {
+    border: 3px solid white;
+    margin: 20px;
+    padding: 10px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bg {
+    background-image: url("https://www.grandcanyonwest.com/files/3456/gcw-hp-canyonsunset.jpg");
+    min-height: 100%;
+}
+
+.headning2 {
+    font-family: "Fredoka One", cursive;
 }
