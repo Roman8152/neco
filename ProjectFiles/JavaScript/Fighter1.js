@@ -3,10 +3,15 @@ Fighter1.attack = function() {
     if (attack1 > 0) {
         Fighter2.hp -= attack1;
         document.getElementById("hp2").innerHTML = "Health: " + Fighter2.hp + "/100";
-        $('.plrAction1').attr('disabled', 'disabled');
+        $(".plrAction1").prop('disabled', true);
+        $(".plrAction2").prop('disabled', false);
+        $("#startButton").hide();
+        random();
         if (Fighter2.hp <= 0) {
             document.getElementById("hp2").innerHTML = "LOSER";
             document.getElementById("hp1").innerHTML = "WINNER";
+            $(":button").prop('disabled', true);
+            $("#playAgain").prop('disabled', false);
         }
     }
 };
@@ -16,10 +21,15 @@ Fighter1.critAttack = function() {
     if (critAttack > 0) {
         Fighter2.hp -= critAttack;
         document.getElementById("hp2").innerHTML = "Health: " + Fighter2.hp  + "/100";
-        $('.plrAction1').attr('disabled', 'disabled');
+        $(".plrAction1").prop('disabled', true);
+        $(".plrAction2").prop('disabled', false);
+        $("#startButton").hide();
+        random();
         if (Fighter2.hp <= 0) {
             document.getElementById("hp2").innerHTML = "LOSER";
             document.getElementById("hp1").innerHTML = "WINNER";
+            $(":button").prop('disabled', true);
+            $("#playAgain").prop('disabled', false);
         }
     }
 };
@@ -28,10 +38,15 @@ Fighter1.spell = function() {
     var spell = 30;
     Fighter2.hp -= spell;
     document.getElementById("hp2").innerHTML = "Health: " + Fighter2.hp  + "/100";
-    $('.plrAction1').attr('disabled', 'disabled');
+    $(".plrAction1").prop('disabled', true);
+    $(".plrAction2").prop('disabled', false);
+    $("#startButton").hide();
+    random();
     if (Fighter2.hp <= 0) {
         document.getElementById("hp2").innerHTML = "LOSER";
         document.getElementById("hp1").innerHTML = "WINNER";
+        $(":button").prop('disabled', true);
+        $("#playAgain").prop('disabled', false);
     }
 };
 
@@ -39,17 +54,26 @@ Fighter1.heal = function() {
     var heal = 15;
     this.hp += heal;
     document.getElementById("hp1").innerHTML = "Health: " + this.hp  + "/100";
-    $('.plrAction1').attr('disabled', 'disabled');
+    $(".plrAction1").prop('disabled', true);
+    $(".plrAction2").prop('disabled', false);
+    $("#startButton").hide();
+    random();
 }
 
 Fighter1.megaHeal = function() {
     var megaHeal = 30;
     this.hp += megaHeal;
     document.getElementById("hp1").innerHTML = "Health: " + this.hp  + "/100";
-    $('.plrAction1').attr('disabled', 'disabled');
+    $(".plrAction1").prop('disabled', true);
+    $(".plrAction2").prop('disabled', false);
+    $("#startButton").hide();
+    random();
 }
 
 Fighter1.raiseDef = function() {
     this.def += 5;
-    $('.plrAction1').attr('disabled', 'disabled');
+    $(".plrAction1").prop('disabled', true);
+    $(".plrAction2").prop('disabled', false);
+    $("#startButton").hide();
+    random();
 }
